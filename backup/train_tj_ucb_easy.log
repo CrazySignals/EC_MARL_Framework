@@ -1,0 +1,17 @@
+Namespace(num_epochs=1500, epoch_size=10, batch_size=500, nprocesses=16, hid_size=128, directed=True, self_loop_type1=1, self_loop_type2=1, gat_num_heads=4, gat_num_heads_out=1, gat_hid_size=32, ge_num_heads=4, first_gat_normalize=False, second_gat_normalize=False, gat_encoder_normalize=False, use_gat_encoder=False, gat_encoder_out_size=64, first_graph_complete=True, second_graph_complete=True, learn_second_graph=False, message_encoder=False, message_decoder=True, nagents=5, mean_ratio=0, detach_gap=10, comm_init='uniform', advantages_per_action=False, comm_mask_zero=False, gamma=1.0, seed=0, normalize_rewards=False, lrate=0.001, entr=0, value_coeff=0.01, max_steps=20, nactions='1', action_scale=1.0, plot=False, plot_env='main', plot_port='8097', save=True, save_every=0, load='', display=False, random=False, render=False, action_sampling='ucb', epsilon=0.1, ucb_c=2.0, env_name='traffic_junction', dim=6, vision=1, add_rate_min=0.3, add_rate_max=0.3, curr_start=0.0, curr_end=0.0, difficulty='easy', vocab_type='bool', nfriendly=5, obs_size=137, num_actions=[2], dim_actions=1, continuous=False, naction_heads=[2])
+====================================================================================================
+Model log:
+
+MAGIC(
+  (sub_processor1): GraphAttention(in_features=128, out_features=32)
+  (sub_processor2): GraphAttention(in_features=128, out_features=128)
+  (obs_encoder): Linear(in_features=137, out_features=128, bias=True)
+  (lstm_cell): LSTMCell(128, 128)
+  (message_decoder): Linear(in_features=128, out_features=128, bias=True)
+  (action_heads): ModuleList(
+    (0): Linear(in_features=256, out_features=2, bias=True)
+  )
+  (value_head): Linear(in_features=256, out_features=1, bias=True)
+)
+====================================================================================================
+
